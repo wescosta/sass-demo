@@ -1,0 +1,15 @@
+{
+  "name": "sass-demo",
+  "version": "0.0.1",
+  "description": "A SASS project using bootstrap-sass for demo",
+  "keywords": [
+    "sass",
+    "bootstrap",
+    "demo"
+  ],
+  "author": "Wesley Anemam",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.3.12"
+  }
+}
