@@ -1,0 +1,16 @@
+//Using Bootstrap's .btn class
+.btn {
+	font: {
+		family: $special-font-family;
+		weight: bold;
+	}
+}
+
+//button-variant is a Bootstrap's mixing
+.btn-special {
+  	@include button-variant(font-color-contrast($btn-special-bg), $btn-special-bg, $btn-special-border);
+}
+
+.btn-random {
+	@include button-variant(random-color(), random-color(), random-color());
+}

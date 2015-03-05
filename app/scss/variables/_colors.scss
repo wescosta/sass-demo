@@ -1,0 +1,14 @@
+//Colors from http://www.colorcombos.com/color-schemes/27/ColorCombo27.html
+$finlandia: 		#587058;
+$waikawa-gray:		#587498;
+$burnt-sienna:		#E86850;
+$school-bus-yellow:	#FFD800;
+
+//Sass provides many builtin function to manipulate colors
+//Check them on http://sass-lang.com/documentation/Sass/Script/Functions.html
+$primary-color: 	lighten($finlandia, 20%);
+$secondary-color: 	lighten($waikawa-gray, 50%);
+$tertiary-color: 	darken($burnt-sienna, 5%);
+
+$cool-color: 		$burnt-sienna;
+$special-color: 	$school-bus-yellow;

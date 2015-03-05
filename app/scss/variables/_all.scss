@@ -1,0 +1,7 @@
+//This file is not require when sass-globbling is used
+//More info: https://github.com/chriseppstein/sass-globbing
+
+//Imports all files containing theme variables
+@import "colors";
+@import "typography";
+@import "buttons";

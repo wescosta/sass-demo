@@ -1,0 +1,18 @@
+//Helper Functions for Colors
+
+@function font-color-contrast($color){
+	@if (lightness($color) > 50) {
+    	@return white;
+  } @else {
+    	@return black;
+  }
+}
+
+@function random-color(){
+	$limit: 255;
+	$red: 	$limit * random();
+	$green: $limit * random();
+	$blue: 	$limit * random();
+	
+	@return rgb($red, $green, $blue);
+}

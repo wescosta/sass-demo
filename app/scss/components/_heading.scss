@@ -1,0 +1,18 @@
+html, body {
+	font-family: 	$head-font-family;
+	color: 			$head-font-color;
+	
+	@include font-size($base-font-size);
+	
+	//Maps (key, value) are very useful!
+	$heading-size-map: (
+		h1: 5em,
+		h2: 3em,
+		h3: 2.5em,
+		h4: 2em,
+		h5: 1.5em,
+		h6: 1.2em,
+	);
+	
+	@include font-size-map($heading-size-map);
+}

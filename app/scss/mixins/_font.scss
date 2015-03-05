@@ -1,0 +1,39 @@
+//Font helper mixings/functions
+@import "../../bower_components/sass-web-fonts/web-fonts";
+
+@function px-to-em($size, $base: $base-font-size){//default variable
+	@debug $size; //will log the value
+	
+	//unitless is a built-in function
+	@if unitless($size) {
+		//throws an error. A stack track will be outputted
+    	@error "$size may not be unitless, was #{$size}. Use px or em.";
+  	}
+	
+	//unit_str is a built-in function
+	$unit: unit_str($size);
+	$is-em: str-index($unit, em);
+		
+	//if else statment
+	@if $is-em {
+		@return $size;
+	}@else {
+		$size: $size / $base;
+	}
+	
+	@return $size + em;
+}
+
+@mixin font-size($size){
+	//this mixin uses the return of a function to set the font-size
+	font-size: px-to-em($size);
+}
+
+@mixin font-size-map($size-map){
+	//So simple to iterate over a map. Isn't it ?
+	@each $selector, $size in $size-map {
+		#{$selector} {
+			@include font-size($size);
+		}
+	}
+}

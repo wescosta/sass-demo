@@ -1,0 +1,20 @@
+@mixin all-viewport-sizes-variants($selector){
+	//Map with Bootstrap's viewport size definition
+	$view-ports-map: (
+		xs: $screen-xs-min,
+		sm: $screen-sm-min,
+		md: $screen-md-min,
+		lg: $screen-lg-min
+	);
+	
+	@debug $view-ports-map;
+	
+	//Iterates over $view-ports-map and creates a media with the @content
+	@each $size, $width in $view-ports-map {
+		@media (min-width: $width) {
+			#{$selector}-#{$size} { //string interpolation
+				@content; // external content defined by the caller mixin
+			}
+		}
+	}
+}

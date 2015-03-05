@@ -1,0 +1,9 @@
+//Defines button's variables (colors, sizes, borders, etc)
+
+$btn-special-bg: 		$special-color;
+$btn-special-border: 	darken($special-color, 10%);
+
+//Overwriting Bootstrap's primary button's color
+$btn-default-color:  	white;
+$btn-default-bg:     	$waikawa-gray !default;
+$btn-default-border: 	darken($btn-default-bg, 5%) !default;

@@ -1,0 +1,20 @@
+/*
+Text alignment with Bootstrap based media queries
+allows to set different text alignment for each Bootstrap defined viewport size, which are:
+extra small (xs), small (sm), medium (md), large (lg). The specific resolution sizes are defined by Bootstrap.
+
+This file generates the following classes:
+
+Extra small devices		Small devices		Medium devices		Large devices
+
+.text-left-xs			.text-left-sm		.text-left-md		.text-left-lg
+.text-right-xs			.text-right-sm		.text-right-md		.text-right-lg
+.text-center-xs			.text-center-sm		.text-center-md		.text-center-lg
+.text-justify-xs		.text-justify-sm	.text-justify-md	.text-justify-lg	
+*/
+
+@each $align in (left, right, center, justify) {//aligns list
+	@include all-viewport-sizes-variants(".text-#{$align}") {
+	 	text-align: $align; //@content
+	}
+}

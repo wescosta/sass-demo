@@ -1,1 +1,9 @@
-@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap"
+//Variables and mixins will be used to create components
+@import "variables/all";
+@import "mixins/all";
+
+//Importing variables before Bootstrap allows to overwrite Bootstrap's variables
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+
+//Components can also use variables and mixins defined by Bootstrap
+@import "components/all";

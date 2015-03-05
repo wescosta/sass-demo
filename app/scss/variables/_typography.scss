@@ -1,0 +1,16 @@
+//Sass has data structure such as lists and maps.
+//It also and provides helper function to work with them.
+$web-fonts-list: (
+	"Ubuntu",
+	"Shadows Into Light",
+	"Quicksand"
+);
+
+$base-font-family:	nth($web-fonts-list, 1);
+$base-font-color:  	black;
+$base-font-size: 	14px;
+
+$head-font-family:	nth($web-fonts-list, 2);
+$head-font-color:	lighten($base-font-color, 20%);
+
+$special-font-family:	nth($web-fonts-list, 3);

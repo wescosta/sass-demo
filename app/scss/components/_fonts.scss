@@ -1,0 +1,4 @@
+//Loads all web fonts defined in $web-fonts-list from Google fonts using sass-web-fonts
+@each $font in $web-fonts-list {
+	@include web-fonts($font);
+}
